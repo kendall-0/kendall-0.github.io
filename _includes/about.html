@@ -17,11 +17,19 @@
         <p style="color:#504646;">Whether you're a student looking to showcase your work, a professional looking to attract clients, or
           a graphic artist looking to share your projects, this template is the perfect starting point! </p>
       </div>
-      <div class="col-lg-8 col-lg-offset-2 text-center">
-        <a href="https://github.com/jeromelachaud/freelancer-theme" class="btn btn-lg btn-outline">
-          <i class="fa fa-download" style="color:#504646"></i> Download Theme
+      {% for post in site.cv %}
+      <div class="portfolio-flex-item portfolio-item">
+        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
+          <div class="caption">
+            <div class="caption-content">
+              <i class="fa fa-search-plus fa-3x"></i>
+            </div>
+          </div>
+          <img src="img/cv.png}" class="img-responsive" alt="{{ post.alt }}">
         </a>
       </div>
+      {% endfor %}
+    
     </div>
   </div>
 </section>
